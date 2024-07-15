@@ -117,14 +117,14 @@ ADD KEY `coursesectionfk` (`coursesectionfk`);
 
 ALTER TABLE `studentstbl` ADD PRIMARY KEY (`studentid`);
 
-ALTER TABLE `coursestbl` MODIFY `courseid` int (11) NOT NULL AUTO_INCRAMENT,
-AUTO_INCRAMENT = 1;
+ALTER TABLE `coursestbl` MODIFY `courseid` int (11) NOT NULL AUTO_INCREMENT,
+AUTO_INCREMENT = 1;
 
-ALTER TABLE `sectionstbl` MODIFY `sectionid` int (11) NOT NULL AUTO_INCRAMENT,
-AUTO_INCRAMENT = 1;
+ALTER TABLE `sectionstbl` MODIFY `sectionid` int (11) NOT NULL AUTO_INCREMENT,
+AUTO_INCREMENT = 1;
 
-ALTER TABLE `studentstbl` MODIFY `studentid` int (11) NOT NULL AUTO_INCRAMENT,
-AUTO_INCRAMENT = 1;
+ALTER TABLE `studentstbl` MODIFY `studentid` int (11) NOT NULL AUTO_INCREMENT,
+AUTO_INCREMENT = 1;
 
 ALTER TABLE `sectionstbl` ADD CONSTRAINT `sectionstbl_ibfk_1` FOREIGN KEY (`studentsectionfk`) REFERENCES `studentstbl` (`studentid`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `sectionstbl_ibfk_2` FOREIGN KEY (`coursesectionfk`) REFERENCES `coursestbl` (`courseid`) ON DELETE CASCADE ON UPDATE CASCADE;
