@@ -109,7 +109,7 @@ VALUES
     '2023-08-02 00:00:00'
   );
 
-ALTER TABLE `coursestbl` ADD PRIMARY KEY (`coursesid`);
+ALTER TABLE `coursestbl` ADD PRIMARY KEY (`courseid`);
 
 ALTER TABLE `sectionstbl` ADD PRIMARY KEY (`sectionid`),
 ADD KEY `studentsectionfk` (`studentsectionfk`),
